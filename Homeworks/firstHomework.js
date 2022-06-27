@@ -217,6 +217,14 @@
 // }
 //
 // console.log(contains(5, -1085369));
+//-------------
+// function contains(digit, number) {
+//
+//     const str = number + ''
+//     return str.includes(digit)
+//
+// }
+// console.log(contains(5, 658948));
 //---------------------------------------------------
 // function firstDigit(num) {
 //     if (typeof num !== "number") return "ERROR please enter number"
@@ -252,23 +260,23 @@
 //
 // console.log(square("rectangle", 20, 5));
 //---------------------------------------------------
-
-function Digits(n) {
-    if (typeof n === 'number') {
-        let largest = 0;
-        let smallest = 9;
-        if (n===0) return 0;
-        if (n < 0) n *= -1;
-
-        while (n) {
-            let r = n % 10;
-            largest = Math.max(r, largest);
-            smallest = Math.min(r, smallest);
-            n = Math.floor(n / 10);
-        }
-        return largest - smallest;
-    } else return "ERROR please enter number"
-}
-
-console.log(Digits(9634785));
+//
+// function Digits(n) {
+//     if (typeof n === 'number') {
+//         let largest = 0;
+//         let smallest = 9;
+//         if (n===0) return 0;
+//         if (n < 0) n *= -1;
+//
+//         while (n) {
+//             let r = n % 10;
+//             largest = Math.max(r, largest);
+//             smallest = Math.min(r, smallest);
+//             n = Math.floor(n / 10);
+//         }
+//         return largest - smallest;
+//     } else return "ERROR please enter number"
+// }
+//
+// console.log(Digits(9634785));
 //---------------------------------------------------
