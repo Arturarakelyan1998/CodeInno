@@ -10,27 +10,53 @@
 //
 // console.log(areOdd(157));
 //____________________________________________________
-let myArray = [7, -2, 3, 4, 5, -1, 6];
-for (let i=0;i<myArray.length;i++)
-{
-    if (myArray[i]<0)
-        myArray.splice(i, 1);
-}
-console.log(myArray.sort()[0]);
-function min(arr) {
+// function ba(a) {
+//
+//     a.sort()
+//     if (a.length===0) return -1
+//     return  (a[0]<0) ?  ba(a.slice(1)) : a[0]
+//
+// }
+// let myArray = [ -2, 3, 4, -5, -1, -6];
+// console.log(ba(myArray))
+//____________________
+//____________________________________________________
+// let myArray = [0, 1,2,3,5,4,5,6,7];
+//
+// function violatedIndex(arr,index=0){
+//     if (arr[0]<arr[1]){
+//         return violatedIndex(arr.splice(1),++index)
+//     }
+//     if(arr.length===1) return -1
+//     return ++index
+// }
+//
+// console.log(violatedIndex(myArray));
 
-    if (arr.length === 0) {
-        return -1;
-    }
-    if (arr[0]>=0 && arr[1]>=0 ){}
-    else if (arr[0] > arr[1]) {
-        if (arr[1] >= 0) return min(arr.slice(1));
-        return min(arr.slice(2));
+//____________________________________________________
 
-    } else {
-        return min([arr[0]].concat(arr.slice(2)));
-    }
-}
+// let arr=[7,5,6,'n'];
+// function rem(arr){
+//
+//     // if (arr.length>0){
+//     //     arr.splice(0, 1)
+//     // }
+//     let i
+//     const empty = []
+//     if (empty.length === 0){
+//         i = 1
+//     }
+//     if (empty.length+1 < arr.length) {
+//         empty.push(rem(arr))
+//
+//         return arr[i++]
+//     }else return empty
+//
+// }
+const arr = [1]
 
-console.log(min(myArray));
+const [removed, ...newArr] = arr
+console.log(newArr);
+// console.log(arr.length);
+
 //____________________________________________________
