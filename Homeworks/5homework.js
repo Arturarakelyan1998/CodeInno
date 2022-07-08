@@ -35,28 +35,60 @@
 
 //____________________________________________________
 
-// let arr=[7,5,6,'n'];
-// function rem(arr){
+// let arr = [9, 68, 9, 5];
 //
-//     // if (arr.length>0){
-//     //     arr.splice(0, 1)
-//     // }
-//     let i
-//     const empty = []
-//     if (empty.length === 0){
-//         i = 1
+// function rem(arr, i = arr.length) {
+//     if (i <= 0) {
+//         return arr.slice(1)
+//     } else {
+//         return rem(arr, --i)
+//
 //     }
-//     if (empty.length+1 < arr.length) {
-//         empty.push(rem(arr))
-//
-//         return arr[i++]
-//     }else return empty
-//
 // }
-const arr = [1]
+//
+// console.log(rem(arr));
+//________________
+// const arr = [1]
+// const [removed, ...newArr] = arr
+// console.log(newArr);
 
-const [removed, ...newArr] = arr
-console.log(newArr);
-// console.log(arr.length);
+//____________________________________________________
+// function flatten(arr, newArr = []) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (Array.isArray(arr[i])) {
+//             flatten(arr[i], newArr);
+//         } else {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// }
+//
+// console.log(flatten([[[0, 1, 88, 3], 1], [9], [3], [[8], 4]]));
+//____________________________________________________
+// function rotate_left(arr, n) {
+//     if (n > 0) {
+//         arr.push(arr.shift())
+//         return rotate_left(arr, --n)
+//     }
+//     if (n < 0) {
+//         arr.unshift(arr.pop())
+//         return rotate_left(arr, ++n)
+//     }
+//     return arr
+// }
+//
+// const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+// console.log(rotate_left(arr, -2));
+//____________________________________________________
+function findSum(num) {
+    if (num < 10) {
+        return num;
+    }
+    const lastDigit = num % 10;
+    const remNum = (num - lastDigit) / 10
+    return findSum(lastDigit + findSum(remNum));
+}
 
+console.log(findSum(29));
 //____________________________________________________
